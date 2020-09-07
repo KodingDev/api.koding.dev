@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
-import { getWeather } from '../../services/openweathermap';
+import { getWeather } from '../../services/openWeatherMap';
 import { success } from '../../util/response';
 
 export default async function buildWeatherRoute(

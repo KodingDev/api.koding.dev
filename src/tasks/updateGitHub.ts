@@ -1,6 +1,6 @@
 import { github } from '../services/github';
 import { getOwner } from '../services/discord';
-import { getWeather } from '../services/openweathermap';
+import { getWeather } from '../services/openWeatherMap';
 import { getCurrentlyPlaying } from '../services/spotify';
 
 /**

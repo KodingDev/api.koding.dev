@@ -1,7 +1,7 @@
 import { cache } from '../util/app';
 import axios from 'axios';
 import { openWeatherMapConfig } from '../config';
-import { Weather } from '../models/openweathermap';
+import { Weather } from '../models/openWeatherMap';
 
 export async function getWeather(system: 'metric' | 'imperial'): Promise<Weather> {
     // Attempt to fetch the cached data

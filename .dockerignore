@@ -1,0 +1,12 @@
+.config/
+node_modules/
+src/
+.dockerignore
+.env
+.eslintignore
+.eslintrc.json
+.gitignore
+.prettierrc
+Dockerfile
+yarn.lock
+yarn-error.log

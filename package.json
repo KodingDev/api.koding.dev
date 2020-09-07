@@ -1,0 +1,60 @@
+{
+  "name": "api.koding.dev",
+  "version": "1.0.0",
+  "description": "REST API for KodingDev.",
+  "main": "index.js",
+  "author": "Koding",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "eslint . --ext .ts",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
+    "start:watch": "nodemon"
+  },
+  "devDependencies": {
+    "@types/cron": "^1.7.2",
+    "@types/d3": "^5.7.2",
+    "@types/jsdom": "^16.2.4",
+    "@types/node": "^14.6.4",
+    "@types/node-cache": "^4.2.5",
+    "@types/spotify-web-api-node": "^4.0.1",
+    "@types/ws": "^7.2.6",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-tsdoc": "^0.2.7",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.0.5",
+    "axios": "^0.20.0",
+    "cron": "^1.8.2",
+    "d3": "^6.1.1",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.3.0",
+    "jsdom": "^16.4.0",
+    "node-cache": "^5.1.2",
+    "querystring": "^0.2.0",
+    "spotify-web-api-node": "^4.0.0",
+    "winston": "^3.3.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "ts-node ./src/index.ts",
+    "ext": "ts"
+  }
+}
